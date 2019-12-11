@@ -1,0 +1,11 @@
+#. Builds the executable
+build() {
+    mkdir -p dist
+    pkger
+    GOOS=linux go build -v -o dist/example
+}
+
+#. Install utilities
+install-utils() {
+    go get github.com/markbates/pkger/cmd/pkger
+}
